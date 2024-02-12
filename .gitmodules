@@ -1,0 +1,3 @@
+[submodule "submodule/aws_cli_container"]
+	path = submodule/aws_cli_container
+	url = https://github.com/yudozen/aws_cli_container.git
