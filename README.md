@@ -11,6 +11,8 @@ AWS Certified DevOps Engineer - Professional CloudFormationの実習です
 ### ソースを取得します。
 $ git clone https://github.com/yudozen/dop_c02_cloudformation.git
 $ cd dop_c02_cloudformation
+$ git submodule init
+$ git submodule update
 
 ### 最小権限の原則にのっとったアクセスキーを`.env.secret`に指定します。
 $ cp .env.secret.example .env.secret
