@@ -16,14 +16,11 @@ $ cd dop_c02_cloudformation
 $ cp .env.secret.example .env.secret
 $ vi .env.secret
 
-### オリジナルのDockerイメージ名を必要に応じて編集します。
-$ vi .env
-
 ### Dockerイメージを作成します。
 $ make build
 
 ### AWSへの認証を確認します。
-$ make test
+$ make test_aws
 
 ### CloudFormationスタックを作成します。
 $ make create
