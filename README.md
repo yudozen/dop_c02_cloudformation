@@ -33,3 +33,11 @@ $ make check
 ### CloudFormationスタックを削除します。
 # make delete
 ```
+
+#
+
+```
+git submodule add https://github.com/yudozen/terraform_container.git ./submodule/terraform_container
+git submodule init
+git submodule update
+```

@@ -1,4 +1,6 @@
 include submodule/aws_cli_container/Makefile
+include submodule/terraform_container/Makefile
+include submodule/pike_container/Makefile
 
 test_aws:
 	${AWS} sts get-caller-identity \
@@ -15,3 +17,12 @@ check:
 
 delete:
 	${AWS} cloudformation delete-stack --stack-name MyTestStack
+
+init:
+	${TERRAFORM} -chdir=src/terraform/environment/dev init
+	
+plan:
+	${TERRAFORM} -chdir=src/terraform/environment/dev plan
+
+scan:
+	${PIKE} scan -d /pike/src/terraform/environment/dev
