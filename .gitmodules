@@ -1,3 +1,9 @@
 [submodule "submodule/aws_cli_container"]
 	path = submodule/aws_cli_container
 	url = https://github.com/yudozen/aws_cli_container.git
+[submodule "submodule/terraform_container"]
+	path = submodule/terraform_container
+	url = https://github.com/yudozen/terraform.git
+[submodule "submodule/pike_container"]
+	path = submodule/pike_container
+	url = https://github.com/yudozen/pike_container.git
