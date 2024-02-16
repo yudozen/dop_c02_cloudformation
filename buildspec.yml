@@ -8,15 +8,13 @@ phases:
     commands:
       - echo pre Build on `date`
       - ls -la
-      - ls -la .git
       - pwd && ls -la
       - . "$(pwd)/.env"
-      - git submodule init
       - git config -f .gitmodules submodule.submodule/aws_cli_container.url ${AWS_CLI_CONTAINER_URL}
       - git config -f .gitmodules submodule.submodule/pike_container.url ${PIKE_CONTAINER_URL}
       - git config -f .gitmodules submodule.submodule/terraform_container.url ${TERRAFORM_CONTAINER_URL}
       - cat .gitmodules
-      - git submodule update
+      - git submodule update --init
       - ls -la
       - ls -la "$(pwd)/submodule"
 
