@@ -4,12 +4,10 @@ phases:
   pre_build:
     commands:
       - echo pre Build on `date`
-      - >
-        sh -c "
-        whoami &&
-        pwd &&
-        ls -la
-        "
+      - whoami && pwd && ls -la
+      - source .env
+      - env
+      - git config -f .gitmodules submodule.submodule/pike_container.url https://git-codecommit.us-east-1.amazonaws.com/v1/repos/pike_container
 
   build:
     commands:
