@@ -8,7 +8,7 @@ phases:
     commands:
       - echo pre Build on `date`
       - ls -la
-      - pwd && ls -la
+      - pwd && ls -la "$(pwd)/submodule/pike_container"
       - . "$(pwd)/.env"
       - git config -f .gitmodules submodule.submodule/aws_cli_container.url ${AWS_CLI_CONTAINER_URL}
       - git config -f .gitmodules submodule.submodule/pike_container.url ${PIKE_CONTAINER_URL}
@@ -16,7 +16,7 @@ phases:
       - cat .gitmodules
       - git submodule update --init
       - ls -la
-      - ls -la "$(pwd)/submodule"
+      - ls -la "$(pwd)/submodule/pike_container"
 
   build:
     commands:
