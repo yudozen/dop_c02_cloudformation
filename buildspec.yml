@@ -6,7 +6,6 @@ phases:
       - echo pre Build on `date`
       - >
         sh -c "
-        hostname &&
         whoami &&
         pwd &&
         ls -la
