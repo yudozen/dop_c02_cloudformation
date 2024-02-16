@@ -4,10 +4,15 @@ phases:
   pre_build:
     commands:
       - echo pre Build on `date`
-      - whoami && pwd && ls -la
       - . "$(pwd)/.env"
-      - env
-      - git config -f .gitmodules submodule.submodule/pike_container.url https://git-codecommit.us-east-1.amazonaws.com/v1/repos/pike_container
+      - git submodule init
+      - git config -f .gitmodules submodule.submodule/aws_cli_container.url ${AWS_CLI_CONTAINER_URL}
+      - git config -f .gitmodules submodule.submodule/pike_container.url ${PIKE_CONTAINER_URL}
+      - git config -f .gitmodules submodule.submodule/terraform_container.url ${TERRAFORM_CONTAINER_URL}
+      - cat .gitmodules
+      - git submodule update
+      - ls -la
+      - ls -la "$(pwd)/submodule"
 
   build:
     commands:
