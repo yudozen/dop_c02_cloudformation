@@ -39,5 +39,6 @@ git_init:
 git_remote_add_aws_origin:
 	git remote add aws_origin ${GIT_AWS_ORIGIN}
 
+# git push時のpush先を設定
 git_remote_master:
 	git config branch.master.remote aws_origin
