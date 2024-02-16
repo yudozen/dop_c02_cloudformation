@@ -24,5 +24,17 @@ init:
 plan:
 	${TERRAFORM} -chdir=src/terraform/environment/dev plan
 
+apply:
+	${TERRAFORM} -chdir=src/terraform/environment/dev apply
+
 scan:
-	${PIKE} scan -d /pike/src/terraform/environment/dev
+	${PIKE} scan -w -i -d /pike/src/terraform/environment/dev
+
+pike_make:
+	${PIKE} make -d /pike/src/terraform/environment/dev
+
+git_init:
+	git init
+
+git_remote_add_aws_origin:
+	git remote add aws_origin ${GIT_AWS_ORIGIN}

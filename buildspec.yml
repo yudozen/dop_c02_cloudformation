@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo pre Build on `date`
+
+  build:
+    commands:
+      - echo Build started on `date`
+
+  post_build:
+    commands:
+      - echo post Build on `date`
+
