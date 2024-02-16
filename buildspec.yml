@@ -1,9 +1,15 @@
 version: 0.2
 
+env:
+  git-credential-helper: yes
+
 phases:
   pre_build:
     commands:
       - echo pre Build on `date`
+      - ls -la
+      - ls -la .git
+      - pwd && ls -la
       - . "$(pwd)/.env"
       - git submodule init
       - git config -f .gitmodules submodule.submodule/aws_cli_container.url ${AWS_CLI_CONTAINER_URL}
