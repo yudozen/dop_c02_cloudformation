@@ -4,7 +4,11 @@ phases:
   pre_build:
     commands:
       - echo pre Build on `date`
-      - hostname && whoami && pwd && ls -la
+      - >
+        hostname &&
+        whoami &&
+        pwd &&
+        ls -la
 
   build:
     commands:
